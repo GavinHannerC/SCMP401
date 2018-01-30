@@ -1,4 +1,4 @@
-# SCMP Capstone Project Notebook
+# SCMP Capstone Project Notebook :bowtie:
 #### Coire Gavin-Hanner
 #### Advisor: Jim Skon
 
