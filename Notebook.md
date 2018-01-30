@@ -1,3 +1,6 @@
-# Welcome to StackEdit!
+# SCMP Capstone Project Notebook
+###Coire Gavin-Hanner
+###Seminar Professor: Simon Garcia
+###Advisor: Jim Skon
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. If you have finished with me, you can just create new files by opening the **file explorer** on the left corner of the navigation bar.
