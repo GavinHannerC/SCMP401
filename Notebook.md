@@ -1,6 +1,10 @@
 # SCMP Capstone Project Notebook
-### Coire Gavin-Hanner
-### Seminar Professor: Simon Garcia
-### Advisor: Jim Skon
+#### Coire Gavin-Hanner
+#### Advisor: Jim Skon
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. If you have finished with me, you can just create new files by opening the **file explorer** on the left corner of the navigation bar.
+## Overall Goals: 
+1. Digitize the output of the HPLC instrument in the Chemistry Department
+2. Standardize and analyze the digital output of the instrument
+3. Design a user-interface for instrument users to utilize the data
+
+## **Notebook Entries**
