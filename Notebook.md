@@ -42,6 +42,15 @@ Sam, who has experience with arduinos, mentioned that there is a host of attachm
 #### Goals:
 1. Set up Raspian OS 
 2. Become familiar with the environment of Raspian
+#### Process: 
+1. Download NOOBS files onto SD card
+2. insert SD Card into Raspberry Pi
+3. Connect Display, Keyboard, and Mouse
+4. Connect to power supply
+5. 
+
+#### Conclusions:
+
 
 
 
