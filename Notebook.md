@@ -7,8 +7,7 @@
 2. Standardize and analyze the digital output of the instrument
 3. Design a user-interface for instrument users to utilize the data
 
-## **Notebook Entries**
-### Research Specs of GC
+## Research Specs of GC
 #### Goal: 
 Learn the specifications of the instrument so I can determine what hardware I will need.
 #### Process:
@@ -19,7 +18,7 @@ After talking with Dudley, I know that the GC instrument's current ourput gives 
 #### Conclusions:
 The system that I design will need to be able to input a difference of voltage.
 
-### Basic Design of A-->D System
+## Basic Design of A-->D System
 #### Goal:
 Design the hardware system that will be used to convert the analog output of the GC instrument to digital information.
 
@@ -35,7 +34,8 @@ This will involve meeting with Skon. This will also probably require deciding on
 1. Arduino
 2. Raspberry PI
 
-###
+## Reflection: 15 Minute Proposal Presentation
+
 
 
 
