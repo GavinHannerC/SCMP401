@@ -35,6 +35,11 @@ This will involve meeting with Skon. This will also probably require deciding on
 2. Raspberry PI
 
 ## Reflection: 15 Minute Proposal Presentation
+During my presentation I discussed the GC instrument, the problems with it, and my basic design for a solution. Professor Garcia identified an unsupported claim in my proposal; I claimed that the current method for integrating peaks was inaccurate. While this may be true, I have no support for it. I need to revisit my proposal and update it. 
+Sam, who has experience with arduinos, mentioned that there is a host of attachments for the arduinos that accomlish various things. He suggested looking for peices that accomplish the task of analog-to-digital conversion.
+
+
+
 
 
 
