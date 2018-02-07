@@ -47,14 +47,16 @@ Sam, who has experience with arduinos, mentioned that there is a host of attachm
 2. insert SD Card into Raspberry Pi
 3. Connect Display, Keyboard, and Mouse
 4. Connect to power supply
-5. 
+5. Select Raspian OS and download
 
 #### Conclusions:
+My Raspberry Pi is initialized!
 
-
-
-
-
-
-
+## Connect to Raspberry Pi from mac
+1. In Raspberry Pi go to setup
+2. enable SSH
+3. type "hostname -I" in Pi terminal to get ip address
+4. In mac, type ssh pi@<IP> where "<IP> is replaced with the IP address
+5. type yes when mac questions authenticity of Pi
+6. enter password (if one is set up on Pi) and you will be connected
 
