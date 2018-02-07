@@ -52,7 +52,7 @@ Sam, who has experience with arduinos, mentioned that there is a host of attachm
 #### Conclusions:
 My Raspberry Pi is initialized!
 
-## Connect to Raspberry Pi from mac
+## Connect to Raspberry Pi from mac :apple:
 1. In Raspberry Pi go to setup
 2. enable SSH
 3. type "hostname -I" in Pi terminal to get ip address
