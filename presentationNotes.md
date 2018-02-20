@@ -29,4 +29,14 @@ IDE has a "gas" limit which limits the number of operations for your program
 22,000 Nodes running currently
 Global distribution: Lots in North america, europe, south Korea
 
+#### PLan
++ Backend
++ LAMP
++ Contains full copies of books
 
+Blockchain
++ Smart Contract
+  + 1 for each book
+  + contain information
+    + size: calculate total storage cost in advance
+  + Hold any amount
