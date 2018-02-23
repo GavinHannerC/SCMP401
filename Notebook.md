@@ -59,4 +59,35 @@ My Raspberry Pi is initialized!
 4. In mac, type ssh pi@<IP> where "<IP> is replaced with the IP address
 5. type yes when mac questions authenticity of Pi
 6. enter password (if one is set up on Pi) and you will be connected
+  
+## Testing the output of the GC Instrument
+#### Goals: 
+Measure the voltage output of the GC instrument and plan a hardware solution to connect the GC to my Raspberry Pi
+
+#### Process: 
+1. Run the GC instrument and separate two substances in a solution (solution and instrument handling provided by Dudley Thomas)
+2. Connect a volt meter to the output wires of the GC (meter and expertise provided by Paula Turner of the Physics department)
+
+#### Results: 
+The baseline for the instrument is -0.05 V right now. The baseline can be changed, but only by about ±0.015 V. The peaks for the two substances in the mixture occurred at -0.001V and +0.009V so the maximum measured change in volts was 0.0059V.
+
+#### Conclusions:
+Due to the magnitude of the output (in volts) professor Turner suggested using an amplifier before connecting the output wires to a ADC (analog-to-digital) converter and connecting to the Raspberry Pi. The amplifier worked by simply increasing the magnitude of the signal. 
+
+#### Future Steps:
+Construct a circuit using an amplifier and an ADC that can be used to connect the GC to my Raspberry Pi (RP).
+
+## Constructing a circuit on a Breadboard
+
+#### Goals: 
+Create an initial circuit to connect the GC to the RP. This will be done on a breadboard initially for testing.
+
+#### Process:
+1. Connect an OpAmp (amplifier) to an ADC and a potenitometer. 
+this was done by porfessor Turner based on an online schematic that she found. 
+
+#### Resutls:
+
+#### Future steps:
+write a program that will allow me to input information from the ADC on the RP
 
