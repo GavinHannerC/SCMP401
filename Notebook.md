@@ -105,14 +105,16 @@ follow the documentation for ADC:
  2. [Python code to use the ADS1015 and ADS1115 analog to digital converters with a Raspberry Pi or BeagleBone black.](https://github.com/adafruit/Adafruit_Python_ADS1X15)
  3. Start by Running a simple python program [Link to intro video](https://www.youtube.com/watch?v=jD4jRgIciHs)
    ```
-   nano helloPi.py
+   pi@raspberrypi:~ $ nano helloPi.py
    ```
    ``` Python
    print "Hello Pi"
    ```
    ```
-   python helloPi.py
+   pi@raspberrypi:~ $ python helloPi.py
    ```
+  4. Save a simple test file [code] (https://github.com/adafruit/Adafruit_Python_ADS1x15/blob/master/examples/simpletest.py)
+  
 
     
 
