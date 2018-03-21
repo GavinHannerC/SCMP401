@@ -103,5 +103,16 @@ follow the documentation for ADC:
   sudo apt-get install -y python3 python3-pip python-dev
   sudo pip3 install rpi.gpio
  2. [Python code to use the ADS1015 and ADS1115 analog to digital converters with a Raspberry Pi or BeagleBone black.](https://github.com/adafruit/Adafruit_Python_ADS1X15)
+ 3. Start by Running a simple python program [Link to intro video](https://www.youtube.com/watch?v=jD4jRgIciHs)
+   ```
+   nano helloPi.py
+   ```
+   ``` Python
+   print "Hello Pi"
+   ```
+   ```
+   python helloPi.py
+   ```
+
     
 
