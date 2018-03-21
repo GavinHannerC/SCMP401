@@ -91,3 +91,17 @@ this was done by porfessor Turner based on an online schematic that she found.
 #### Future steps:
 write a program that will allow me to input information from the ADC on the RP
 
+
+## Starting to Program on the Raspberry Pi
+#### Goals: 
+set up my device so that I can start coding as soon as the circuit is connected
+
+#### Process:
+follow the documentation for ADC:
+ 1.  install Python 3, PIP for Python 3, and the RPi.GPIO library (used to talk to GPIO pins on the Pi) with these commands:
+  sudo apt-get update (updates lists of packages)
+  sudo apt-get install -y python3 python3-pip python-dev
+  sudo pip3 install rpi.gpio
+ 2. [Python code to use the ADS1015 and ADS1115 analog to digital converters with a Raspberry Pi or BeagleBone black.](https://github.com/adafruit/Adafruit_Python_ADS1X15)
+    
+
