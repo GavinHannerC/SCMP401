@@ -138,7 +138,23 @@ use the command
 ```
 sudo raspi-config
 ```
+It worked! Now I am getting a different error message:
+```
+Reading ADS1x15 values, press Ctrl-C to quit...
+|      0 |      1 |      2 |      3 |
+-------------------------------------
+Traceback (most recent call last):
+  File "simpletest.py", line 42, in <module>
+    values[i] = adc.read_adc(i, gain=GAIN)
+  File "build/bdist.linux-armv7l/egg/Adafruit_ADS1x15/ADS1x15.py", line 192, in read_adc
+  File "build/bdist.linux-armv7l/egg/Adafruit_ADS1x15/ADS1x15.py", line 128, in _read
+  File "build/bdist.linux-armv7l/egg/Adafruit_GPIO/I2C.py", line 129, in writeList
+  File "build/bdist.linux-armv7l/egg/Adafruit_PureIO/smbus.py", line 274, in write_i2c_block_data
+IOError: [Errno 121] Remote I/O error
+```
 
+Use  ```i2cdetect -y 1 ``` to probe all addresses on a bus.
+This reported that nothing was connected to the Pi
 
   
 
