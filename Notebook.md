@@ -115,6 +115,32 @@ follow the documentation for ADC:
    ```
   4. Save a simple test file [code] (https://github.com/adafruit/Adafruit_Python_ADS1x15/blob/master/examples/simpletest.py)
   
+ ## Connecting Circuit to Raspberry Pi
+I tried to run the simple test program and kept getting hte following eror message:
+
+```
+Traceback (most recent call last):
+  File "simpletest.py", line 12, in <module>
+    adc = Adafruit_ADS1x15.ADS1115()
+  File "build/bdist.linux-armv7l/egg/Adafruit_ADS1x15/ADS1x15.py", line 319, in __init__
+  File "build/bdist.linux-armv7l/egg/Adafruit_ADS1x15/ADS1x15.py", line 82, in __init__
+  File "build/bdist.linux-armv7l/egg/Adafruit_GPIO/I2C.py", line 66, in get_i2c_device
+  File "build/bdist.linux-armv7l/egg/Adafruit_GPIO/I2C.py", line 99, in __init__
+  File "build/bdist.linux-armv7l/egg/Adafruit_PureIO/smbus.py", line 97, in __init__
+  File "build/bdist.linux-armv7l/egg/Adafruit_PureIO/smbus.py", line 122, in open
+IOError: [Errno 2] No such file or directory: '/dev/i2c-1'
+```
+To solve the problem, I used the steps on this [website](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c) to configure I2C. I needed to use the command ```sudo raspi-config``` and then select Interfacing options > I2C> enable I2C
+
+I Checked where I should be putting the pins and used this [website](https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial)
+
+use the command
+```
+sudo raspi-config
+```
+
+
+  
 
     
 
