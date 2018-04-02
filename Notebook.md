@@ -116,7 +116,7 @@ follow the documentation for ADC:
   4. Save a simple test file [code] (https://github.com/adafruit/Adafruit_Python_ADS1x15/blob/master/examples/simpletest.py)
   
  ## Connecting Circuit to Raspberry Pi
-I tried to run the simple test program and kept getting hte following eror message:
+I tried to run the simple test program and kept getting the following error message:
 
 ```
 Traceback (most recent call last):
