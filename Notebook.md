@@ -156,6 +156,11 @@ IOError: [Errno 121] Remote I/O error
 Use  ```i2cdetect -y 1 ``` to probe all addresses on a bus.
 This reported that nothing was connected to the Pi
 
+## Learn to Use GPIO
+#### Goal:
+##### Because I was having great difficulty connecting the ADC circuit to my Raspberry PI, my new goal is to simply learn to use the GPIO pins on my PI.
+
+I started by installing RPi.GPIO. This [website](https://pypi.python.org/pypi/RPi.GPIO) has a download folder. I put into a folder called gpio in /home. 
   
 
     
