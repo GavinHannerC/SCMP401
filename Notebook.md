@@ -161,6 +161,15 @@ This reported that nothing was connected to the Pi
 ##### Because I was having great difficulty connecting the ADC circuit to my Raspberry PI, my new goal is to simply learn to use the GPIO pins on my PI.
 
 I started by installing RPi.GPIO. This [website](https://pypi.python.org/pypi/RPi.GPIO) has a download folder. I put into a folder called gpio in /home. 
+
+## Reflection: Presentation #1
+#### Disclaimer: as you already know, this reflection is a couple weeks late. I completely forgot that I had to write this after giving my first presentation
+
+In this presentation, I described the background of my project, what I had done so far, and my future plans for the project. When giving the presentation, I was still working with Professor Turner to construct the ADC circuit. My goals for future work included receiving and analyzing data from the ADC, building a UI, and sending the information to the user. I had the class help me figure out how I should accomplish my last goal of sending the information to the user. We decided that email would be the best format. I plan to incorporate that in my project. 
+
+## Reflection: Presentation #2
+
+In this presentation I gave brief overview of my project, explained what I had done since the last presentation, and talked again about my goals for the project. To summarize what I had done, I attempted to connect the ADC circuit to my Raspberry Pi and recieve information. I was unable to accomplish this. I spent a lot of time searching for solutions to the problem that I was having. Most of the "solutions" that I found led me down rabbit holes that did nothing but waste time. I did manage to find a few useful websites and found things like the i2cdetect command that checks to see if anything is connected to the pi with i2c connection protocol. I used the command and determined that nothing was connected. My immediate goal is to remedy that. One of my classmates (i do not remember which one) asked me if there was any way I could tell if the the ADC was giving an output. That is one place to start. I will also try to replace batteries in the power source, connecting wires, etc. One other possibility is that the GPIO pins are not working correctly for some reason. To check that I will try to complete a simple project using the GPIO pins to respond to a signal and light an LED. Because of the stagnant state of my project, I did not have much to present on, but I was given lots of great feedback by my peers and Professor Garcia. 
   
 
     
