@@ -162,6 +162,18 @@ This reported that nothing was connected to the Pi
 
 I started by installing RPi.GPIO. This [website](https://pypi.python.org/pypi/RPi.GPIO) has a download folder. I put into a folder called gpio in /home. 
 
+I then started to experiment with LEDs and Buttons. I learned that to connect an LED to the Pi, you have to build the following circuit: 
+3.3V power source ---> resistor ----> LED ------> GPIO pin. You can then write a python program to use the LED. A [button](https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/) is similar:
+3.3V power source ---> resistor ----> button------> GPIO pin.
+
+This [Raspberry Pi documentation page](https://www.raspberrypi.org/documentation/usage/gpio/python/README.md) gives simple functions for using LEDs and Buttons.
+
+I was able to write code so that an LED blinked when I pressed a button and stopped blinking when I pressed it again.
+
+#### Conclusion:
+I can find nothing wrong with the GPIO pins. I have been using code from online tutorials and the GPIO pins have been behaving exactly as the tutorials said they would. I beleive that there is something else wrong in the system. 
+I think that this was a very useful exercise though. The LEDs and Buttons were very easy to use and simple to set up. I will be using buttons and LEDs in my (initial) user interface. I think it will be very simple to control inputs using the button hardwired to the ADC circuit. 
+
 ## Reflection: Presentation #1
 #### Disclaimer: as you already know, this reflection is a couple weeks late. I completely forgot that I had to write this after giving my first presentation
 
@@ -171,6 +183,25 @@ In this presentation, I described the background of my project, what I had done 
 
 In this presentation I gave brief overview of my project, explained what I had done since the last presentation, and talked again about my goals for the project. To summarize what I had done, I attempted to connect the ADC circuit to my Raspberry Pi and recieve information. I was unable to accomplish this. I spent a lot of time searching for solutions to the problem that I was having. Most of the "solutions" that I found led me down rabbit holes that did nothing but waste time. I did manage to find a few useful websites and found things like the i2cdetect command that checks to see if anything is connected to the pi with i2c connection protocol. I used the command and determined that nothing was connected. My immediate goal is to remedy that. One of my classmates (i do not remember which one) asked me if there was any way I could tell if the the ADC was giving an output. That is one place to start. I will also try to replace batteries in the power source, connecting wires, etc. One other possibility is that the GPIO pins are not working correctly for some reason. To check that I will try to complete a simple project using the GPIO pins to respond to a signal and light an LED. Because of the stagnant state of my project, I did not have much to present on, but I was given lots of great feedback by my peers and Professor Garcia. 
   
+
+## Redesigning the Circuit
+
+Because I was not able to receive input to the Pi correctly, I brought the ADC circuit back to Professor Turner to see if she had any insights into what could be causing the problem. She noticed that there were multiple grounds in the circuit and beleived that that was most likely this issue. She redesigned the circuit using the power supply from the Pi instead of a battery pack. The circuit now has only one ground and works perfectly! I was able to run the simple test program that I found in the documentation for the ADC and read values between 0 and ~600 that changed when I used the variable resistor. This means that I can now start to program!
+
+## Writing data to a csv file. 
+#### Goal:
+Be able to store data from the ADC in a permanent file. I chose a CSV file because it can be opened and manipulated using many common programs such as Excel
+
+#### Procedure:
+I started with the simple test program for the ADC and modified it to write to a CSV file. I learned about functions that will read and write data to a CSV file from this [website](http://stackabuse.com/reading-and-writing-csv-files-in-python/). I was able to accomplish this. My code is below:
+
+#### Conclusion:
+I now have code that lets me store data easily in a CSV file.
+
+#### Future Steps:
+1. add button funcitonality that allows me to control when the program reads data from the ADC. It should write data to the CSV after it stops reading
+2. Add in code that creates a new csv file everytime the program runs. It should put these files in a separate folder. My guess is that the best way to do this is to name the files after the time that the program is run.
+
 
     
 
