@@ -40,3 +40,9 @@ Blockchain
   + contain information
     + size: calculate total storage cost in advance
   + Hold any amount
+## Tutor
+#### The Bootstrap
+Problem 1: diffucult to use/understand without statistical experience
+Problem 2: exisiting implementation
+
+got the confidence and 
