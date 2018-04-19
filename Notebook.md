@@ -203,5 +203,27 @@ I now have code that lets me store data easily in a CSV file.
 2. Add in code that creates a new csv file everytime the program runs. It should put these files in a separate folder. My guess is that the best way to do this is to name the files after the time that the program is run.
 
 
-    
+## Creating a unique CSV file name
+#### Goal:
+Write data to a csv file named after the date and time that the program is run. 
+
+#### Code:
+'''
+import datetime
+import csv
+import os
+
+#Path to the directory where the CSV file will be written
+destFolder = "/home/pi/SCMP401/CSV"
+
+os.chdir(destFolder)
+data = [1,2,3,4,5]
+csvName = str(datetime.datetime.now())
+myFile = open(csvName, 'w')
+with myFile:
+	writer = csv.writer(myFile)
+	writer.writerow(data)
+'''
+
+
 
