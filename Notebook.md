@@ -194,7 +194,40 @@ Be able to store data from the ADC in a permanent file. I chose a CSV file becau
 
 #### Procedure:
 I started with the simple test program for the ADC and modified it to write to a CSV file. I learned about functions that will read and write data to a CSV file from this [website](http://stackabuse.com/reading-and-writing-csv-files-in-python/). I was able to accomplish this. My code is below:
+```
+import time
+import Adafruit_ADS1x15
+import os
+import csv
+import datetime
 
+adc = Adafruit_ADS1x15.ADS1015()
+GAIN = 16
+destFolder = "/home/pi/SCMP401/CSV"
+os.chdir(destFolder)
+
+print('Reading ADS1x15 values, press Ctrl-C to quit...')
+# Print nice channel column headers.
+print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*range(4)))
+print('-' * 37)
+data = []
+loopNum = 0
+# Main loop.
+while loopNum < 20:
+    values = [0]*4
+    for i in range(4):
+	values[i] = adc.read_adc(i, gain=GAIN)
+    print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*values))
+    time.sleep(0.5)
+    data.append(values[1]-values[0])
+    loopNum += 1
+
+csvName = str(datetime.datetime.now())
+myFile = open(csvName, 'w')
+with myFile:
+	writer = csv.writer(myFile)
+	writer.writerow(data)
+```
 #### Conclusion:
 I now have code that lets me store data easily in a CSV file.
 
@@ -224,6 +257,59 @@ with myFile:
 	writer = csv.writer(myFile)
 	writer.writerow(data)
 ```
+## Using a button to control the ADC
+#### Goal:
+make it easy for a user to control when the ADC is being used. One press of the button should make the Pi start recording data from the Pi. Another button press will make the Pi stop recording data and write existing data to a CSV file
+
+#### code:
+```
+import time
+import Adafruit_ADS1x15
+import os
+import csv
+import datetime
+from gpiozero import Button
+from time import sleep
+
+btn = Button(23)
+
+adc = Adafruit_ADS1x15.ADS1015()
+GAIN = 16
+destFolder = "/home/pi/SCMP401/CSV"
+os.chdir(destFolder)
+
+print('Reading ADS1x15 values, press Ctrl-C to quit...')
+# Print nice channel column headers.
+print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*range(4)))
+print('-' * 37)
+data = []
+btnState = 0
+
+
+while btnState < 1:
+	if not btn.is_pressed: #For the buttons that I am using, this boolean expression is opposite what you would expect
+		btnState += 1
+	time.sleep(0.2)
+
+# Main loop.
+while btnState > 0 and btnState < 2:
+    values = [0]*4
+    for i in range(4):
+	values[i] = adc.read_adc(i, gain=GAIN)
+    print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*values))
+    time.sleep(0.2)
+    data.append(values[1]-values[0])
+    if not btn.is_pressed:
+    	btnState += 1
+
+
+csvName = str(datetime.datetime.now())
+myFile = open(csvName, 'w')
+with myFile:
+	writer = csv.writer(myFile)
+	writer.writerow(data)
+```
+Note: The buttons that I am using seem to give odd boolean values. When they are pressed button.is_pressed returns false and vise versa
 
 
 
