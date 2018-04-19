@@ -208,7 +208,7 @@ I now have code that lets me store data easily in a CSV file.
 Write data to a csv file named after the date and time that the program is run. 
 
 #### Code:
-'''
+```
 import datetime
 import csv
 import os
@@ -223,7 +223,7 @@ myFile = open(csvName, 'w')
 with myFile:
 	writer = csv.writer(myFile)
 	writer.writerow(data)
-'''
+```
 
 
 
