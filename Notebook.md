@@ -311,5 +311,15 @@ with myFile:
 ```
 Note: The buttons that I am using seem to give odd boolean values. When they are pressed button.is_pressed returns false and vise versa
 
+## Sending an email from a python Program
+#### Goal:
+be able to send a csv file to a specfied email account form a python program
+
+#### Setting up ssmtp and email account
+I found directions on this [website](http://www.raspberry-projects.com/pi/software_utilities/email/ssmtp-to-send-emails)
+
+#### set up email account
+normal gmail set up
+go to this [link](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps
 
 
