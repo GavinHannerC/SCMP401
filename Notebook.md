@@ -322,4 +322,7 @@ I found directions on this [website](http://www.raspberry-projects.com/pi/softwa
 normal gmail set up
 go to this [link](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps
 
+## Reflection
+
+
 
