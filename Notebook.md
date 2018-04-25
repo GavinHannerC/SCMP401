@@ -323,6 +323,6 @@ normal gmail set up
 go to this [link](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps
 
 ## Reflection
-
+This week's presentation was much more successful than last presentation. I was able to show some successes! My classmates did not have many questions or comments for me. Professor Garcia had a great insight during the presentation though. He suggested that instead of emailing the data to the user, set up a githib account and automatically push the data to the repository. This would allow the users to access the informaiton in one spot and it would make it much easier to program for me.
 
 
