@@ -29,6 +29,5 @@ cd CSV
 The CSV directory is also available through the standard file viewer on the Pi
 
 ### Images
-![Image]
-(IMG_3926.png)
+![Image](IMG_3926.png)
 
