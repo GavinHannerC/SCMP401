@@ -30,4 +30,10 @@ The CSV directory is also available through the standard file viewer on the Pi
 
 ### Images
 ![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3926.png)
+![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3927.png)
+![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3928.png)
+![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3929.png)
+![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3930.png)
+![Image](https://github.com/GavinHannerC/SCMP401/blob/master/Images/IMG_3931.png)
+
 
