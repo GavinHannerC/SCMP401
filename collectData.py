@@ -13,7 +13,7 @@ btn = Button(23) #23 is the GPIO pin that the button is connected to
 
 #Setup ADC
 adc = Adafruit_ADS1x15.ADS1015()
-GAIN = 16
+GAIN = 2/3
 
 #change directory so that all CSV files go into a specific folder
 destFolder = "/home/pi/SCMP401/CSV"
