@@ -19,11 +19,19 @@ GAIN = 2/3
 destFolder = "/home/pi/SCMP401/CSV"
 os.chdir(destFolder)
 
+#Ask for filename
+filename = raw_input("Enter name : ")
+
+# Setup data arrays
+data = []
+xs = []
+x = 1
+
 # Print nice channel column headers.
 print('Reading ADS1x15 values, press Ctrl-C to quit...')
 print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*range(4)))
 print('-' * 37)
-data = []
+
 
 #setup button state
 btnState = 0
@@ -41,12 +49,14 @@ while btnState > 0 and btnState < 2:
 	values[i] = adc.read_adc(i, gain=GAIN) #take in the values from each of the four ADC channels
     print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} |'.format(*values))
     time.sleep(0.1)
-    data.append(values[1]-values[0]) #the difference between these two values gives the data that we need
+    xs.append(x)
+    x += 1
+    data.append(values[0]) #values[0]-values[1] the difference between these two values gives the data that we need
     if not btn.is_pressed: #if the button is pressed again, exit the loop
     	btnState += 1
 
 #Write data to a CSV file
-csvName = str(datetime.datetime.now()) #names the file after the date and time the program was run
+csvName = filename + str(datetime.datetime.now()) #names the file after the date and time the program was run
 myFile = open(csvName, 'w')
 with myFile:
 	for row in data:
