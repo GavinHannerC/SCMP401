@@ -1,6 +1,6 @@
 # SCMP Capstone Project Notebook :bowtie:
 #### Coire Gavin-Hanner
-#### Advisor: Jim Skon
+#### Advisor: Jim Skon and Paula Turner
 
 ## Overall Goals: 
 1. Digitize the output of the GC instrument in the Chemistry Department :pencil: --> :tv:
@@ -56,7 +56,7 @@ My Raspberry Pi is initialized!
 1. In Raspberry Pi go to setup
 2. enable SSH
 3. type "hostname -I" in Pi terminal to get ip address
-4. In mac, type ssh pi@<IP> where "<IP> is replaced with the IP address
+4. In mac, type ssh pi@<IP> where "<IP>" is replaced with the IP address
 5. type yes when mac questions authenticity of Pi
 6. enter password (if one is set up on Pi) and you will be connected
   
@@ -337,5 +337,25 @@ I tried a few different data collection rates (every 0.01, 0.02, 0.05, 0.1, 0.2,
 The highest signal-to-noise ratio I discovered came from adding up all of the values from the four input channels on the ADC to create one data point. I think there is some reciprocal fluctuation between the input channels that means when their data is added together, the noise decreases. I do not know why this is the case.
 
 ## Data Smoothing
-I found a package that performs a locally weighted scatterplot smoothing[(LOWESS)](http://www.statsmodels.org/stable/generated/statsmodels.nonparametric.smoothers_lowess.lowess.html) of data. 
+I found a package that performs a locally weighted scatterplot smoothing [(LOWESS)](http://www.statsmodels.org/stable/generated/statsmodels.nonparametric.smoothers_lowess.lowess.html) of data. This worked pretty well once I was able to download all necessary packages. 
 
+## Charting and Storing Data
+I used matplotlib.pyplot to chart the data after smoothing. CSV and chart image files are stored automatically using the name the user enters. 
+
+# Future directions
+
+## Live charting
+It would be great to be able to completely replace the chart recorder by visualizing the data collection as it occurs. I found some tools in matplotlib that allow live plotting. I would suggest starting there. 
+
+## Data analysis
+### Peak Finding
+This tool looks promising [scipy.signal](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html)
+### Integration
+Quantitative analysis of the data would be a great addition to this project. There is probably a package out there that will do this.
+
+## User Interface
+The current program is not very user-friendly. I envisioned writing a website that would be able to run the data collection program, show the resulting charts, and store the data and image files on a server that could be accessed by anyone on the Kenoyn server.
+
+## Data availability
+There are a number of possibilities for deceminating the data files produced by the collection program. One is to store them on a kenyon server site, another is to setup a github account that the program will automatically push to. You could also set up an email server that automatically sends the files to an account entered by the user. 
+###
