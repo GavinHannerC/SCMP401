@@ -13,7 +13,7 @@ Learn the specifications of the instrument so I can determine what hardware I wi
 #### Process:
 Talk with Dudley to get information
 #### Results:
-After talking with Dudley, I know that the GC instrument's current ourput gives a difference of voltages. 
+After talking with Dudley, I know that the GC instrument's current output gives a difference of voltages. 
 
 #### Conclusions:
 The system that I design will need to be able to input a difference of voltage.
@@ -325,4 +325,17 @@ go to this [link](https://www.google.com/settings/security/lesssecureapps) and a
 ## Reflection
 This week's presentation was much more successful than last presentation. I was able to show some successes! My classmates did not have many questions or comments for me. Professor Garcia had a great insight during the presentation though. He suggested that instead of emailing the data to the user, set up a githib account and automatically push the data to the repository. This would allow the users to access the informaiton in one spot and it would make it much easier to program for me.
 
+# Summer 2019
+## Goals
+1. Read data coming directly from GC
+2. Use a python package to smooth the data
+3. Chart and store the data
+
+## Reading data from GC
+I removed the potentiometer from the circuit and connected the postive lead coming from the GC to the A0 channel on the ADC. I changed the settings on the GC and the ADC so that the GC was giving the maximum signal (Attentuation = 1) and the ADC gain was at its lowest level (GAIN = 2/3). This gave a relatively high signal-to-noise ratio. I did not try every possible combination so there may be one that give less noise than this. When the GAIN was set higher, the ADC reading was at a constant 2047 which must be the maximum reading.
+I tried a few different data collection rates (every 0.01, 0.02, 0.05, 0.1, 0.2, and 0.5 seconds) and calculated the standard deviation of the baseline for each rate after 250 data points. There was no obvious correlation between data collection rate and standard deviation
+The highest signal-to-noise ratio I discovered came from adding up all of the values from the four input channels on the ADC to create one data point. I think there is some reciprocal fluctuation between the input channels that means when their data is added together, the noise decreases. I do not know why this is the case.
+
+## Data Smoothing
+I found a package that performs a locally weighted scatterplot smoothing[(LOWESS)](http://www.statsmodels.org/stable/generated/statsmodels.nonparametric.smoothers_lowess.lowess.html) of data. 
 
