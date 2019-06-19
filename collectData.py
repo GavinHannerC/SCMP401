@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 #from scipy.signal import find_peaks
 
 btn = Button(23) #23 is the GPIO pin that the button is connected to
-BASELINE = 7000 #Change this if the baseline changes (this is a rough estimate near the baseline)
+BASELINE = 0 #Change this if the baseline changes (this is a rough estimate near the baseline)
 
 ##### Setup ADC
 adc = Adafruit_ADS1x15.ADS1015()
@@ -46,7 +46,7 @@ while btnState < 1:
                 btnState += 1
         time.sleep(0.1) #this has to be on a human time scale, otherwise you will change button state multiple times by physically pressing it once
 
-##### Main data collection loop. Entered after button is pressed once
+##### Main data collection loop. Entered after button is pressed once, exited when button is pressed again
 while btnState > 0 and btnState < 2:
         values = [0]*4
         for i in range(4):
@@ -65,7 +65,7 @@ newData = sm.nonparametric.lowess(data, xs, frac=0.01, is_sorted=False, )
 smData = newData[:,1] #LOWESS outputs a 2-D array with x and y values, we want a 1-D list with only y-values
 
 ##### Write data to a CSV file
-csvName = filename + " " + str(datetime.datetime.now()) #names the file after the date and time the program was run
+csvName = filename + " " + str(datetime.datetime.now()) + ".csv" #names the file after the date and time the program was run
 myFile = open(csvName, 'w')
 with myFile:
         for row in smData:
@@ -76,7 +76,7 @@ with myFile:
 #peaks, _ = find_peaks(smData, width=50)
 plt.plot(smData)
 #plt.plot(peaks, smData[peaks], "x")
-plt.savefig(filename + " " + str(datetime.datetime.now()), edgecolor='#7851a9', format='png')
+plt.savefig(filename + " " + str(datetime.datetime.now()) + ".png", edgecolor='#7851a9', format='png')
 plt.show()
 
 
